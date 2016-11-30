@@ -2,6 +2,9 @@ require("rspec")
 require("vehicle")
 
 describe(Vehicle) do
+  before() do
+    Vehicle.clear()
+  end
   describe("#age") do
     it("returns the age of the vehicle") do
       test_vehicle = Vehicle.new("Toyota", "Prius", 2000, "Red")
