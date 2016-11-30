@@ -25,7 +25,7 @@ describe(Vehicle) do
 
   describe("#color") do
     it("return the color of the vehicle") do
-      test_vehicle = Vehicle.new("Toyata", "Prius", 2000, "Red")
+      test_vehicle = Vehicle.new("Toyota", "Prius", 2000, "Red")
     end
   end
 
@@ -37,7 +37,7 @@ describe(Vehicle) do
 
   describe("#save") do
     it("adds a vehivle to the array of saved vehicles") do
-      test_vehicle = Vehicle.new("Toyata", "Prius", 2000, "Red")
+      test_vehicle = Vehicle.new("Toyota", "Prius", 2000, "Red")
       test_vehicle.save()
       expect(Vehicle.all()).to(eq([test_vehicle]))
     end
@@ -45,7 +45,7 @@ describe(Vehicle) do
 
   describe(".clear") do
     it("empties out all of the saved vehicles") do
-      Vehicle.new("Toyata", "Prius", 2000, "Red")
+      Vehicle.new("Toyota", "Prius", 2000, "Red")
       Vehicle.clear()
       expect(Vehicle.all()).to(eq([]))
     end
@@ -53,8 +53,16 @@ describe(Vehicle) do
 
   describe("#worth_buying?") do
     it("returns false if the car is not American made and less than 15 years old") do
-      test_vehicle = Vehicle.new("Toyata", "Prius", 2000, "Red")
+      test_vehicle = Vehicle.new("Toyota", "Prius", 2000, "Red")
       expect(test_vehicle.worth_buying()).to(eq(false))
+    end
+  end
+
+  describe("#id") do
+    it("returns the id of the vehicle") do
+      test_vehicle = Vehicle.new("Toyota", "Prius", 2000, "Red")
+      test_vehicle.save()
+      expect(test_vehicle.id()).to(eq(1))
     end
   end
 

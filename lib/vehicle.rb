@@ -5,6 +5,7 @@
     @make = make
     @model = model
     @color = color
+    @id = @@vehicles.length().+(1)
   end
 
   define_method(:age) do
@@ -22,6 +23,10 @@
 
   define_method(:color) do
     @color
+  end
+
+  define_method(:id) do
+    @id
   end
 
   define_singleton_method(:all) do
