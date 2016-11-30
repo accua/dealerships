@@ -34,4 +34,13 @@ describe(Vehicle) do
       expect(Vehicle.all()).to(eq([]))
     end
   end
+
+  describe("#save") do
+    it("adds a vehivle to the array of saved vehicles") do
+      test_vehicle = Vehicle.new("Toyata", "Prius", 2000, "Red")
+      test_vehicle.save()
+      expect(Vehicle.all()).to(eq([test_vehicle]))
+    end
+  end
+
 end

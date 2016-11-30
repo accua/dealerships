@@ -26,6 +26,10 @@
 
   define_singleton_method(:all) do
     @@vehicles
-
   end
+
+  define_method(:save) do
+    @@vehicles.push(self)
+  end
+
 end
