@@ -36,4 +36,9 @@
     @@vehicles = []
   end
 
+  define_method(:worth_buying) do
+    american_cars =  ["Ford", "Chevy", "GMC", "Dodge", "Lincoln"]
+    american_cars.include?(@make) && (self.age() < 15)
+  end
+
 end

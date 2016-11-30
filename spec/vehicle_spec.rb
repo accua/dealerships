@@ -50,4 +50,12 @@ describe(Vehicle) do
       expect(Vehicle.all()).to(eq([]))
     end
   end
+
+  describe("#worth_buying?") do
+    it("returns false if the car is not American made and less than 15 years old") do
+      test_vehicle = Vehicle.new("Toyata", "Prius", 2000, "Red")
+      expect(test_vehicle.worth_buying()).to(eq(false))
+    end
+  end
+
 end
