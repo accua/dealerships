@@ -40,4 +40,12 @@ describe(Dealership) do
       expect(Dealership.all()).to(eq([test_dealership]))
     end
   end
+
+  describe(".clear") do
+    it("empties out the saved dealership array") do
+      Dealership.new("Andrew's Used Cars")
+      Dealership.clear()
+      expect(Dealership.all()).to(eq([]))
+    end
+  end
 end
