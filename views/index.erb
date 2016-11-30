@@ -6,8 +6,8 @@
 <h2> Here is a list of dealerships that are part of the Find Yo' Ride family:</h2>
 <h4>if there aren't any dealerships add one, and we will put 'em though our comprehensive vetting process!</h4>
 <ul>
-  <% @@dealerships.each() do |dealership| %>
+  <% @dealerships.each() do |dealership| %>
   <li><a href="/dealership/<%= dealership.id() %>"><%= dealership.name() %></a></li>
   <% end %>
 </ul>
-<button type="button" name="add_dealership">Add a dealership to the Find Yo' Ride family.</button>
+<a href="/dealership/new">Add a dealership to the Find Yo' Ride Family</a>

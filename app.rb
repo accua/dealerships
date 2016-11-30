@@ -5,16 +5,20 @@ require('./lib/vehicle')
 
 # landingpage list all dealerships
 get('/') do
+  @@dealerships
   erb(:index)
 end
 
 # add new dealership to list of dealerships
 get('/dealership/new') do
+
   erb(:dealership_add)
 end
 
 
 post("/dealership/success") do
+  name = params.fetch("dealership_name")
+  @dealership = Dealership.new(name)
   erb(:success_d)
 end
 

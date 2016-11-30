@@ -1,1 +1,4 @@
-<h1> Hey <%= dealership.id(@@dealerships.length).name() %>  </h1>
+<h1> Hey <%= @dealership.name() %>, welcome to The Family!</h1>
+
+<a href="/dealership/<%= dealership.id() %>">To the dealership!</a>
+<a href = "/">home</a>
