@@ -29,4 +29,9 @@ describe(Vehicle) do
     end
   end
 
+  describe(".all") do
+    it("is empty at first") do
+      expect(Vehicle.all()).to(eq([]))
+    end
+  end
 end
