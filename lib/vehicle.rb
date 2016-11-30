@@ -17,6 +17,10 @@
     @make
   end
 
+  define_method(:year) do
+    @year
+  end
+
   define_method(:model) do
     @model
   end
