@@ -1,8 +1,9 @@
 class Vehicle
-  define_method(:initialize) do |make, model, year|
+  define_method(:initialize) do |make, model, year, color|
     @year = year
     @make = make
     @model = model
+    @color = color
   end
 
   define_method(:age) do
@@ -16,5 +17,9 @@ class Vehicle
 
   define_method(:model) do
     @model
+  end
+
+  define_method(:color) do
+    @color
   end
 end
